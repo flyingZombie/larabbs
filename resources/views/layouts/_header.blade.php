@@ -38,6 +38,11 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+
+                            <li>
+                                <a href="{{ route('users.edit', Auth::id())}}">Edit Profile</a>
+                            </li>
+
                             <li>
                                 <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
