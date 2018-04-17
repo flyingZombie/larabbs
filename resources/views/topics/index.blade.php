@@ -17,13 +17,9 @@
 
           <div class="panel-heading">
               <ul class="nav nav-pills">
-                <li role="presentation" class="active">
-                    <a href="#">Last reply</a>
-                </li>
-                <li role="presentation">
-                    <a href="#">Latest reply</a>
-                </li>
-              </ul>
+                    <li class="{{ active_class( ! if_query('order', 'recent') ) }}"><a href="{{ Request::url() }}?order=default">最后回复</a></li>
+                    <li class="{{ active_class(if_query('order', 'recent')) }}"><a href="{{ Request::url() }}?order=recent">最新发布</a></li>
+                </ul>
           </div>
 
           <div class="panel-body">

@@ -17,7 +17,8 @@ class TopicsController extends Controller
 	public function index()
 	{
 		//$topics = Topic::paginate(30);
-        $topics = Topic::with('user', 'category')->paginate(30);
+        //$topics = Topic::with('user', 'category')->paginate(30);
+        $topics = $topic->withOrder($request->order)->paginate(20);
 		return view('topics.index', compact('topics'));
 	}
 
