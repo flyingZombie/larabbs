@@ -19,7 +19,11 @@
         <div class="collpase navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-
+              <li class="{{ active_class(if_route('topic.index')) }}"><a href="{{ route('topics.index')}}">Topic</a></li>
+              <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 1)))}}"><a href="{{ route('categories.show', 1) }}">Share</a></li>
+              <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 2)))}}"><a href="{{ route('categories.show', 2) }}">Tutorial</a></li>
+              <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 3)))}}"><a href="{{ route('categories.show', 3) }}">Questions</a></li>
+              <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 4)))}}"><a href="{{ route('categories.show', 4) }}">Notice</a></li>
             </ul>
 
             <!-- Right Side Of Navbar-->
