@@ -8,8 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token()}}">
 
-    <title>@yield('title', 'LaraBBS') - Laravel 教程</title>
-
+    <title>@yield('title', 'LaraBBS') - Laravel advanced 教程</title>
+    <meta name="description" content="@yield('description', 'LaraBBS training')">
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css')}}">
     @yield('styles')
