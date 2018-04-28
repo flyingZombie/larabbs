@@ -31,9 +31,11 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 // User Routes
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 
-Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
-
+// Topics Routes
+Route::resource('topics', 'TopicsController', ['only' => ['index','create', 'store', 'update', 'edit', 'destroy']]);
+Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
 // Categories Routes
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 
 Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
+
