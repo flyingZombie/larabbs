@@ -3,6 +3,6 @@
     <p class="pull-left">
       <a href="">Lester</a> Coding
     </p>
-    <p class="pull-left"> <a href="mailto:lester.shiyi.li@gmail.com"></a> Contact us</p>
+    <p class="pull-left"> <a href="mailto:{{ setting('contact_email') }}"></a> Contact us</p>
 </div>
 </footer>
