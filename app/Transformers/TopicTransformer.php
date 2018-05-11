@@ -4,6 +4,7 @@ namespace App\Transformers;
 
 use App\Models\Topic;
 use League\Fractal\TransformerAbstract;
+use Illuminate\Support\Facades\Log;
 
 /**
 *
@@ -14,6 +15,7 @@ class TopicTransformer extends TransformerAbstract
 
     public function transform(Topic $topic)
     {
+        //Log::info("Logging topic variable : ". $topic->title);
         return [
             'id' => $topic->id,
             'title' => $topic->title,
