@@ -100,4 +100,10 @@ class AuthorizationsController extends Controller
     {
         return $this->response->noContent();
     }
+
+    public function read()
+    {
+        $this->user()->markAsRead();
+        return $this->response->noContent();
+    }
 }
